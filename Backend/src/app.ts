@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import helmet from "helmet";
 import morgan from "morgan";
 import { errorHandler } from "./middleware/error.middleware.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -12,6 +11,14 @@ import activityRoutes from "./routes/activity.routes.js";
 import notificationRoutes from "./routes/notification.routes.js";
 import dashboardRoutes from "./routes/dashboard.routes.js";
 import userRoutes from "./routes/user.routes.js";
+
+
+import * as helmetModule from "helmet";
+
+const helmet =
+  "default" in helmetModule
+    ? helmetModule.default
+    : helmetModule;
 
 
 
