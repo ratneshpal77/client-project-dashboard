@@ -17,9 +17,7 @@ import type {
   ActivityAction,
 } from "../../types/activity";
 
-// ============================================================
-// HELPERS
-// ============================================================
+
 
 const formatActivityAction = (
   action: ActivityAction,
@@ -145,9 +143,7 @@ const getActivityDescription = (
   return "Activity updated";
 };
 
-// ============================================================
-// COMPONENT
-// ============================================================
+
 
 const ActivityPage = () => {
   const [activities, setActivities] =
@@ -164,9 +160,6 @@ const ActivityPage = () => {
       "ALL",
     );
 
-  // ============================================================
-  // LOAD RECENT ACTIVITIES
-  // ============================================================
 
   useEffect(() => {
     let mounted = true;
@@ -212,9 +205,7 @@ const ActivityPage = () => {
     };
   }, []);
 
-  // ============================================================
-  // REAL-TIME ACTIVITY
-  // ============================================================
+  
 
   useEffect(() => {
     const socket = getSocket();
@@ -259,9 +250,7 @@ const ActivityPage = () => {
     };
   }, []);
 
-  // ============================================================
-  // FILTER
-  // ============================================================
+
 
   const filteredActivities =
     useMemo(() => {
@@ -279,9 +268,6 @@ const ActivityPage = () => {
       selectedFilter,
     ]);
 
-  // ============================================================
-  // UI
-  // ============================================================
 
   return (
     <div className="mx-auto w-full max-w-6xl">

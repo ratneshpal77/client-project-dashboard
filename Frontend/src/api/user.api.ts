@@ -1,8 +1,6 @@
 import api from "./axios";
 
-// ============================================================
-// DEVELOPER
-// ============================================================
+
 
 export interface Developer {
   id: string;
@@ -18,9 +16,7 @@ interface DevelopersResponse {
   };
 }
 
-// ============================================================
-// GET DEVELOPERS
-// ============================================================
+
 
 export const getDevelopersApi =
   async (): Promise<DevelopersResponse> => {

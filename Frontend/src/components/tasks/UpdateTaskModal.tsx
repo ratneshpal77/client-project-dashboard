@@ -83,9 +83,7 @@ const UpdateTaskModal = ({
     role === "ADMIN" ||
     role === "PROJECT_MANAGER";
 
-  // ==========================================================
-  // LOAD DEVELOPERS
-  // ==========================================================
+
 
   useEffect(() => {
     if (!canReassign) {
@@ -134,9 +132,6 @@ const UpdateTaskModal = ({
     };
   }, [canReassign]);
 
-  // ==========================================================
-  // SUBMIT
-  // ==========================================================
 
   const handleSubmit = async (
     event: FormEvent<HTMLFormElement>,
@@ -199,9 +194,7 @@ const UpdateTaskModal = ({
       aria-labelledby="update-task-title"
     >
       <div className="w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl">
-        {/* ================================================== */}
-        {/* HEADER */}
-        {/* ================================================== */}
+        
 
         <div className="flex items-start justify-between border-b border-slate-100 px-5 py-5 sm:px-6">
           <div className="min-w-0">
@@ -245,9 +238,6 @@ const UpdateTaskModal = ({
           </button>
         </div>
 
-        {/* ================================================== */}
-        {/* FORM */}
-        {/* ================================================== */}
 
         <form
           onSubmit={handleSubmit}
@@ -461,9 +451,8 @@ const UpdateTaskModal = ({
             )}
           </div>
 
-          {/* ================================================== */}
-          {/* FOOTER */}
-          {/* ================================================== */}
+  
+     
 
           <div className="flex flex-col-reverse gap-3 border-t border-slate-100 bg-slate-50/70 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
             <button

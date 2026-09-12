@@ -5,6 +5,7 @@ import {
 import type {
   FormEvent,
 } from "react";
+
 import {
   loginApi,
   meApi,
@@ -19,6 +20,7 @@ import {
 } from "react-router-dom";
 
 import {
+  setAccessToken,
   setCredentials,
 } from "../../store/auth.store";
 
@@ -47,10 +49,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      // ======================================================
-      // LOGIN
-      // ======================================================
-
+      
       const loginResponse =
         await loginApi({
           email: email.trim(),
@@ -66,20 +65,21 @@ const Login = () => {
         );
       }
 
-      // ======================================================
-      // GET CURRENT USER
-      // IMPORTANT: SEND ACCESS TOKEN
-      // ======================================================
+      
 
-    const meResponse =
-  await meApi();
+      dispatch(
+        setAccessToken(accessToken),
+      );
+
+      
+
+      const meResponse =
+        await meApi();
 
       const user =
         meResponse.data.user;
 
-      // ======================================================
-      // SAVE AUTH STATE
-      // ======================================================
+     
 
       dispatch(
         setCredentials({
@@ -88,9 +88,6 @@ const Login = () => {
         }),
       );
 
-      // ======================================================
-      // ROLE-BASED REDIRECT
-      // ======================================================
 
       if (user.role === "ADMIN") {
         navigate(
@@ -140,9 +137,7 @@ const Login = () => {
   return (
     <main className="min-h-screen bg-slate-950">
       <div className="grid min-h-screen lg:grid-cols-2">
-        {/* ================================================= */}
-        {/* LEFT SECTION */}
-        {/* ================================================= */}
+       
 
         <section className="relative hidden overflow-hidden lg:flex">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-violet-700 to-slate-950" />
@@ -192,9 +187,7 @@ const Login = () => {
           </div>
         </section>
 
-        {/* ================================================= */}
-        {/* RIGHT SECTION */}
-        {/* ================================================= */}
+      
 
         <section className="flex min-h-screen items-center justify-center bg-slate-100 p-4 sm:p-6 lg:p-10">
           <div className="w-full max-w-md">

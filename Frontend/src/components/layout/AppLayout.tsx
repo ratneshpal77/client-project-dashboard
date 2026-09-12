@@ -212,9 +212,7 @@ const AppLayout = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] =
     useState(false);
 
-  // ==========================================================
-  // LOAD NOTIFICATIONS
-  // ==========================================================
+  
 
   useEffect(() => {
     let mounted = true;
@@ -269,10 +267,7 @@ const AppLayout = ({
     };
   }, []);
 
-  // ==========================================================
-  // REAL-TIME NOTIFICATIONS
-  // ==========================================================
-
+ 
   useEffect(() => {
     const socket = getSocket();
 
@@ -348,9 +343,7 @@ const AppLayout = ({
     };
   }, []);
 
-  // ==========================================================
-  // MARK ONE AS READ
-  // ==========================================================
+
 
   const handleNotificationClick = async (
     notification: Notification,
@@ -404,9 +397,7 @@ const AppLayout = ({
     }
   };
 
-  // ==========================================================
-  // MARK ALL AS READ
-  // ==========================================================
+
 
   const handleMarkAllAsRead =
     async () => {
@@ -435,9 +426,7 @@ const AppLayout = ({
       }
     };
 
-  // ==========================================================
-  // LOGOUT
-  // ==========================================================
+ 
 
   const handleLogout = async () => {
     try {
@@ -465,9 +454,7 @@ const AppLayout = ({
     user?.name || "User",
   );
 
-  // ==========================================================
-  // NAVIGATION
-  // ==========================================================
+
 
   const dashboardPath =
     role === "ADMIN"
@@ -479,9 +466,7 @@ const AppLayout = ({
   return (
     <div className="min-h-screen bg-slate-950">
       <div className="flex min-h-screen">
-        {/* ================================================== */}
-        {/* DESKTOP SIDEBAR */}
-        {/* ================================================== */}
+    
 
         <aside className="hidden w-64 shrink-0 border-r border-slate-800 bg-slate-950 lg:flex lg:flex-col">
           {/* Logo */}
@@ -638,14 +623,10 @@ const AppLayout = ({
           </div>
         </aside>
 
-        {/* ================================================== */}
-        {/* MAIN */}
-        {/* ================================================== */}
+       
 
         <div className="flex min-w-0 flex-1 flex-col bg-slate-100">
-          {/* ================================================== */}
-          {/* TOPBAR */}
-          {/* ================================================== */}
+     
 
           <header className="sticky top-0 z-30 flex h-20 items-center justify-between border-b border-slate-200 bg-white/95 px-4 backdrop-blur sm:px-6">
             <div className="min-w-0">
@@ -659,9 +640,7 @@ const AppLayout = ({
             </div>
 
             <div className="flex items-center gap-3">
-              {/* ================================================== */}
-              {/* NOTIFICATION */}
-              {/* ================================================== */}
+            
 
               <div className="relative">
                 <button
@@ -707,9 +686,7 @@ const AppLayout = ({
                   )}
                 </button>
 
-                {/* ================================================== */}
-                {/* NOTIFICATION PANEL */}
-                {/* ================================================== */}
+             
 
                 {isNotificationOpen && (
                   <div className="absolute right-0 top-12 z-50 w-[calc(100vw-2rem)] max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 sm:w-96">
@@ -860,9 +837,7 @@ const AppLayout = ({
                 )}
               </div>
 
-              {/* ================================================== */}
-              {/* USER */}
-              {/* ================================================== */}
+           
 
               <div className="hidden h-10 items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 sm:flex">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white">
@@ -880,9 +855,7 @@ const AppLayout = ({
                 </div>
               </div>
 
-              {/* ================================================== */}
-              {/* MOBILE MENU */}
-              {/* ================================================== */}
+              
 
               <button
                 type="button"
@@ -904,9 +877,7 @@ const AppLayout = ({
             </div>
           </header>
 
-          {/* ================================================== */}
-          {/* MOBILE NAV */}
-          {/* ================================================== */}
+       
 
           {isMobileMenuOpen && (
             <div className="border-b border-slate-200 bg-white px-4 py-4 lg:hidden sm:px-6">
@@ -1035,9 +1006,7 @@ const AppLayout = ({
             </div>
           )}
 
-          {/* ================================================== */}
-          {/* PAGE CONTENT */}
-          {/* ================================================== */}
+        
 
           <main className="flex-1 p-4 sm:p-6 lg:p-8">
             {children}

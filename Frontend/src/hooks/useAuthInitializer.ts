@@ -22,10 +22,7 @@ const useAuthInitializer = () => {
     const initializeAuth =
       async (): Promise<void> => {
         try {
-          // ==================================================
-          // GET NEW ACCESS TOKEN
-          // Refresh token is stored in HttpOnly cookie
-          // ==================================================
+        
 
           const refreshResponse =
             await refreshApi();
@@ -43,20 +40,13 @@ const useAuthInitializer = () => {
             );
           }
 
-          // ==================================================
-          // IMPORTANT
-          // Save access token in Redux BEFORE /auth/me
-          // ==================================================
+         
 
           dispatch(
             setAccessToken(accessToken),
           );
 
-          // ==================================================
-          // GET CURRENT USER
-          // Axios interceptor will automatically attach
-          // the access token from Redux
-          // ==================================================
+   
 
           const meResponse =
             await meApi();
@@ -65,9 +55,7 @@ const useAuthInitializer = () => {
             return;
           }
 
-          // ==================================================
-          // SAVE COMPLETE AUTH STATE
-          // ==================================================
+        
 
           dispatch(
             setCredentials({

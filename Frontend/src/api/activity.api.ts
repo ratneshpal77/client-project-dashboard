@@ -4,9 +4,7 @@ import type {
   ActivityResponse,
 } from "../types/activity";
 
-// ============================================================
-// GET RECENT 20 ACTIVITIES
-// ============================================================
+
 
 export const getRecentActivitiesApi =
   async (): Promise<ActivityResponse> => {
@@ -18,9 +16,7 @@ export const getRecentActivitiesApi =
     return response.data;
   };
 
-// ============================================================
-// GET PROJECT ACTIVITIES
-// ============================================================
+
 
 export const getProjectActivitiesApi =
   async (
@@ -34,9 +30,7 @@ export const getProjectActivitiesApi =
     return response.data;
   };
 
-// ============================================================
-// GET TASK ACTIVITIES
-// ============================================================
+
 
 export const getTaskActivitiesApi =
   async (

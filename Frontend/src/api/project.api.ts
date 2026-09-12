@@ -5,9 +5,7 @@ import type {
   ProjectsResponse,
 } from "../types/project";
 
-// ============================================================
-// CREATE PROJECT INPUT
-// ============================================================
+
 
 export interface CreateProjectInput {
   name: string;
@@ -16,9 +14,7 @@ export interface CreateProjectInput {
   managerId?: string;
 }
 
-// ============================================================
-// GET ALL PROJECTS
-// ============================================================
+
 
 export const getProjectsApi =
   async (): Promise<ProjectsResponse> => {
@@ -30,9 +26,7 @@ export const getProjectsApi =
     return response.data;
   };
 
-// ============================================================
-// GET SINGLE PROJECT
-// ============================================================
+
 
 export const getProjectApi =
   async (
@@ -46,10 +40,7 @@ export const getProjectApi =
     return response.data;
   };
 
-// ============================================================
-// CREATE PROJECT
-// ADMIN + PROJECT_MANAGER
-// ============================================================
+
 
 export const createProjectApi =
   async (

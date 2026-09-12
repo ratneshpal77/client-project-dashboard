@@ -109,9 +109,7 @@ const Projects = () => {
     }
   }, [role]);
 
-  // ============================================================
-  // LOAD PROJECTS
-  // ============================================================
+
 
   useEffect(() => {
     let mounted = true;
@@ -157,9 +155,7 @@ const Projects = () => {
     };
   }, []);
 
-  // ============================================================
-  // LOAD CLIENTS FOR CREATE PROJECT
-  // ============================================================
+ 
 
   useEffect(() => {
     if (!canCreateProject) {
@@ -200,9 +196,6 @@ const Projects = () => {
     };
   }, [canCreateProject]);
 
-  // ============================================================
-  // OPEN CREATE MODAL
-  // ============================================================
 
   const openCreateModal =
     () => {
@@ -213,9 +206,7 @@ const Projects = () => {
       setIsCreateModalOpen(true);
     };
 
-  // ============================================================
-  // CLOSE CREATE MODAL
-  // ============================================================
+  
 
   const closeCreateModal =
     () => {
@@ -227,9 +218,6 @@ const Projects = () => {
       setCreateError("");
     };
 
-  // ============================================================
-  // CREATE PROJECT
-  // ============================================================
 
   const handleCreateProject = async (
     event: FormEvent<HTMLFormElement>,
@@ -338,9 +326,7 @@ const Projects = () => {
 
   return (
     <div className="space-y-6">
-      {/* ====================================================== */}
-      {/* HEADER */}
-      {/* ====================================================== */}
+   
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
@@ -392,9 +378,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* ====================================================== */}
-      {/* ERROR */}
-      {/* ====================================================== */}
+  
 
       {error && (
         <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
@@ -402,9 +386,7 @@ const Projects = () => {
         </div>
       )}
 
-      {/* ====================================================== */}
-      {/* LOADING */}
-      {/* ====================================================== */}
+   
 
       {isLoading && (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -427,9 +409,6 @@ const Projects = () => {
         </div>
       )}
 
-      {/* ====================================================== */}
-      {/* EMPTY STATE */}
-      {/* ====================================================== */}
 
       {!isLoading &&
         !error &&
@@ -474,9 +453,7 @@ const Projects = () => {
           </div>
         )}
 
-      {/* ====================================================== */}
-      {/* PROJECT GRID */}
-      {/* ====================================================== */}
+
 
       {!isLoading &&
         projects.length > 0 && (
@@ -547,9 +524,7 @@ const Projects = () => {
           </div>
         )}
 
-      {/* ====================================================== */}
-      {/* CREATE PROJECT MODAL */}
-      {/* ====================================================== */}
+     
 
       {isCreateModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm">

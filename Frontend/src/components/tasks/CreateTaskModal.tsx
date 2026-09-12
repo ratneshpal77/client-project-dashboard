@@ -60,9 +60,7 @@ const CreateTaskModal = ({
   const [error, setError] =
     useState("");
 
-  // ==========================================================
-  // LOAD DEVELOPERS
-  // ==========================================================
+ 
 
   useEffect(() => {
     let mounted = true;
@@ -107,9 +105,7 @@ const CreateTaskModal = ({
     };
   }, []);
 
-  // ==========================================================
-  // SUBMIT
-  // ==========================================================
+ 
 
   const handleSubmit = async (
     event: FormEvent<HTMLFormElement>,
@@ -168,9 +164,7 @@ const CreateTaskModal = ({
       aria-labelledby="create-task-title"
     >
       <div className="w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl">
-        {/* ================================================== */}
-        {/* HEADER */}
-        {/* ================================================== */}
+       
 
         <div className="flex items-start justify-between border-b border-slate-100 px-5 py-5 sm:px-6">
           <div>
@@ -214,9 +208,6 @@ const CreateTaskModal = ({
           </button>
         </div>
 
-        {/* ================================================== */}
-        {/* FORM */}
-        {/* ================================================== */}
 
         <form
           onSubmit={handleSubmit}
@@ -413,9 +404,7 @@ const CreateTaskModal = ({
             </div>
           </div>
 
-          {/* ================================================== */}
-          {/* FOOTER */}
-          {/* ================================================== */}
+         
 
           <div className="flex flex-col-reverse gap-3 border-t border-slate-100 bg-slate-50/70 px-5 py-4 sm:flex-row sm:justify-end sm:px-6">
             <button

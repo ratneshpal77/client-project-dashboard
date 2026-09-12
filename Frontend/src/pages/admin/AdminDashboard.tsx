@@ -36,9 +36,7 @@ const AdminDashboard = () => {
   const [error, setError] =
     useState("");
 
-  // ============================================================
-  // LOAD ADMIN DASHBOARD
-  // ============================================================
+ 
 
   useEffect(() => {
     let isMounted = true;
@@ -84,9 +82,7 @@ const AdminDashboard = () => {
     };
   }, []);
 
-  // ============================================================
-  // REAL-TIME PRESENCE
-  // ============================================================
+
 
   useEffect(() => {
     const socket = getSocket();
@@ -138,9 +134,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* ================================================== */}
-      {/* HEADER */}
-      {/* ================================================== */}
+     
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -164,9 +158,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* ================================================== */}
-      {/* ERROR */}
-      {/* ================================================== */}
+    
 
       {error && (
         <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
@@ -174,9 +166,7 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      {/* ================================================== */}
-      {/* STAT CARDS */}
-      {/* ================================================== */}
+      
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {/* Projects */}
@@ -289,9 +279,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* ================================================== */}
-      {/* TASK STATUS */}
-      {/* ================================================== */}
+   
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -414,9 +402,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* ================================================== */}
-      {/* QUICK INSIGHT */}
-      {/* ================================================== */}
+     
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-slate-900 p-6 text-white shadow-lg shadow-indigo-500/10">

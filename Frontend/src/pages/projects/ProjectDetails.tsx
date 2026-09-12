@@ -76,9 +76,6 @@ const ProjectDetails = () => {
 
   const role = user?.role;
 
-  // ==========================================================
-  // ROLE-BASED CONTENT
-  // ==========================================================
 
   const roleContent = useMemo(() => {
     switch (role) {
@@ -129,9 +126,7 @@ const ProjectDetails = () => {
     role === "PROJECT_MANAGER" ||
     role === "DEVELOPER";
 
-  // ==========================================================
-  // LOAD PROJECT
-  // ==========================================================
+
 
   useEffect(() => {
     if (!id) {
@@ -185,9 +180,7 @@ const ProjectDetails = () => {
     };
   }, [id]);
 
-  // ==========================================================
-  // FILTER TASKS
-  // ==========================================================
+
 
   const handleFilterChange = async (
     nextFilters: TaskFilters,
@@ -219,17 +212,13 @@ const ProjectDetails = () => {
     }
   };
 
-  // ==========================================================
-  // RESET FILTERS
-  // ==========================================================
+ 
 
   const handleResetFilters = () => {
     void handleFilterChange({});
   };
 
-  // ==========================================================
-  // TASK CREATED
-  // ==========================================================
+
 
   const handleTaskCreated = (
     newTask: ProjectTask,
@@ -251,9 +240,7 @@ const ProjectDetails = () => {
     });
   };
 
-  // ==========================================================
-  // TASK UPDATED
-  // ==========================================================
+
 
   const handleTaskUpdated = (
     updatedTask: ProjectTask,
@@ -268,9 +255,7 @@ const ProjectDetails = () => {
     );
   };
 
-  // ==========================================================
-  // TASK DELETED
-  // ==========================================================
+
 
   const handleTaskDeleted = (
     taskId: string,
@@ -282,9 +267,7 @@ const ProjectDetails = () => {
     );
   };
 
-  // ==========================================================
-  // LABELS
-  // ==========================================================
+
 
   const statusLabel: Record<
     ProjectTask["status"],
@@ -316,9 +299,7 @@ const ProjectDetails = () => {
     CRITICAL: "bg-red-50 text-red-600",
   };
 
-  // ==========================================================
-  // LOADING STATE
-  // ==========================================================
+  
 
   if (isLoading) {
     return (
@@ -334,9 +315,7 @@ const ProjectDetails = () => {
     );
   }
 
-  // ==========================================================
-  // ERROR STATE
-  // ==========================================================
+
 
   if (error || !project) {
     return (
@@ -355,16 +334,12 @@ const ProjectDetails = () => {
     );
   }
 
-  // ==========================================================
-  // PROJECT DETAILS
-  // ==========================================================
+
 
   return (
     <>
       <div className="space-y-6">
-        {/* ================================================== */}
-        {/* BREADCRUMB */}
-        {/* ================================================== */}
+      
 
         <div className="flex items-center justify-between gap-3">
           <Link
@@ -383,9 +358,7 @@ const ProjectDetails = () => {
           )}
         </div>
 
-        {/* ================================================== */}
-        {/* PROJECT HEADER */}
-        {/* ================================================== */}
+        
 
         <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-slate-900 p-6 text-white shadow-xl shadow-indigo-500/10 sm:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
@@ -449,9 +422,7 @@ const ProjectDetails = () => {
           </div>
         </section>
 
-        {/* ================================================== */}
-        {/* ROLE INFO / CREATE */}
-        {/* ================================================== */}
+    
 
         <div className="rounded-2xl border border-indigo-100 bg-indigo-50/60 px-4 py-3 sm:px-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -498,9 +469,7 @@ const ProjectDetails = () => {
           </div>
         </div>
 
-        {/* ================================================== */}
-        {/* TASKS */}
-        {/* ================================================== */}
+      
 
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-100 p-5 sm:p-6">
@@ -837,9 +806,7 @@ const ProjectDetails = () => {
         />
       </div>
 
-      {/* ==================================================== */}
-      {/* CREATE TASK MODAL */}
-      {/* ==================================================== */}
+     
 
       {isCreateTaskOpen && (
         <CreateTaskModal
@@ -851,9 +818,7 @@ const ProjectDetails = () => {
         />
       )}
 
-      {/* ==================================================== */}
-      {/* UPDATE TASK MODAL */}
-      {/* ==================================================== */}
+      
 
       {editingTask && role && (
         <UpdateTaskModal
@@ -866,9 +831,7 @@ const ProjectDetails = () => {
         />
       )}
 
-      {/* ==================================================== */}
-      {/* DELETE TASK CONFIRM */}
-      {/* ==================================================== */}
+     
 
       {deletingTask && (
         <DeleteTaskConfirm

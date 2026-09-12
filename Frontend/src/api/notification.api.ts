@@ -1,8 +1,6 @@
 import api from "./axios";
 
-// ============================================================
-// NOTIFICATION TYPES
-// ============================================================
+
 
 export type NotificationType =
   | "TASK_ASSIGNED"
@@ -47,9 +45,7 @@ interface NotificationActionResponse {
   };
 }
 
-// ============================================================
-// GET NOTIFICATIONS
-// ============================================================
+
 
 export const getNotificationsApi =
   async (): Promise<NotificationsResponse> => {
@@ -61,9 +57,7 @@ export const getNotificationsApi =
     return response.data;
   };
 
-// ============================================================
-// GET UNREAD COUNT
-// ============================================================
+
 
 export const getUnreadNotificationCountApi =
   async (): Promise<UnreadCountResponse> => {
@@ -75,9 +69,7 @@ export const getUnreadNotificationCountApi =
     return response.data;
   };
 
-// ============================================================
-// MARK ONE AS READ
-// ============================================================
+
 
 export const markNotificationAsReadApi =
   async (
@@ -91,9 +83,7 @@ export const markNotificationAsReadApi =
     return response.data;
   };
 
-// ============================================================
-// MARK ALL AS READ
-// ============================================================
+
 
 export const markAllNotificationsAsReadApi =
   async (): Promise<NotificationActionResponse> => {

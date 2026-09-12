@@ -558,9 +558,7 @@ const Clients = () => {
         </section>
       </div>
 
-      {/* ================================================== */}
-      {/* CREATE / EDIT MODAL */}
-      {/* ================================================== */}
+    
 
       {isFormOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm">
@@ -697,9 +695,7 @@ const Clients = () => {
         </div>
       )}
 
-      {/* ================================================== */}
-      {/* VIEW MODAL */}
-      {/* ================================================== */}
+ 
 
       {isViewOpen &&
         selectedClient && (
@@ -829,9 +825,7 @@ const Clients = () => {
           </div>
         )}
 
-      {/* ================================================== */}
-      {/* DELETE CONFIRMATION */}
-      {/* ================================================== */}
+     
 
       {deleteTarget && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm">

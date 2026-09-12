@@ -7,9 +7,7 @@ import type {
   RefreshResponse,
 } from "../types/auth";
 
-// ============================================================
-// LOGIN
-// ============================================================
+
 
 export const loginApi = async (
   data: LoginRequest,
@@ -23,9 +21,7 @@ export const loginApi = async (
   return response.data;
 };
 
-// ============================================================
-// GET CURRENT USER
-// ============================================================
+
 
 export const meApi =
   async (): Promise<MeResponse> => {
@@ -37,9 +33,7 @@ export const meApi =
     return response.data;
   };
 
-// ============================================================
-// REFRESH ACCESS TOKEN
-// ============================================================
+
 
 export const refreshApi =
   async (): Promise<RefreshResponse> => {
@@ -51,9 +45,7 @@ export const refreshApi =
     return response.data;
   };
 
-// ============================================================
-// LOGOUT
-// ============================================================
+
 
 export const logoutApi =
   async (): Promise<void> => {

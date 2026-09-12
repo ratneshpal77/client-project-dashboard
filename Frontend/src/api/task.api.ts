@@ -4,9 +4,7 @@ import type {
   ProjectTask,
 } from "../types/project";
 
-// ============================================================
-// TASK FILTERS
-// ============================================================
+
 
 export interface TaskFilters {
   status?: ProjectTask["status"];
@@ -15,9 +13,7 @@ export interface TaskFilters {
   toDate?: string;
 }
 
-// ============================================================
-// CREATE TASK
-// ============================================================
+
 
 export interface CreateTaskInput {
   title: string;
@@ -35,9 +31,7 @@ interface TaskResponse {
   };
 }
 
-// ============================================================
-// UPDATE TASK
-// ============================================================
+
 
 export interface UpdateTaskInput {
   title?: string;
@@ -48,9 +42,6 @@ export interface UpdateTaskInput {
   dueDate?: string | null;
 }
 
-// ============================================================
-// GET PROJECT TASKS
-// ============================================================
 
 interface TasksResponse {
   success: boolean;
@@ -107,9 +98,7 @@ export const getProjectTasksApi =
     return response.data;
   };
 
-// ============================================================
-// GET SINGLE TASK
-// ============================================================
+
 
 export const getTaskApi =
   async (
@@ -123,9 +112,6 @@ export const getTaskApi =
     return response.data;
   };
 
-// ============================================================
-// CREATE TASK
-// ============================================================
 
 export const createTaskApi =
   async (
@@ -141,9 +127,7 @@ export const createTaskApi =
     return response.data;
   };
 
-// ============================================================
-// UPDATE TASK
-// ============================================================
+
 
 export const updateTaskApi =
   async (
@@ -159,9 +143,7 @@ export const updateTaskApi =
     return response.data;
   };
 
-// ============================================================
-// DELETE TASK
-// ============================================================
+
 
 interface DeleteTaskResponse {
   success: boolean;

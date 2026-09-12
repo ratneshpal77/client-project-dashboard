@@ -6,9 +6,7 @@ const SOCKET_URL =
 
 let socket: Socket | null = null;
 
-// ============================================================
-// CONNECT SOCKET
-// ============================================================
+
 
 export const connectSocket = (
   accessToken: string,
@@ -52,17 +50,12 @@ export const connectSocket = (
   return socket;
 };
 
-// ============================================================
-// GET SOCKET INSTANCE
-// ============================================================
+
 
 export const getSocket = (): Socket | null => {
   return socket;
 };
 
-// ============================================================
-// DISCONNECT SOCKET
-// ============================================================
 
 export const disconnectSocket =
   (): void => {

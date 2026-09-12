@@ -21,9 +21,7 @@ const api = axios.create({
   },
 });
 
-// ============================================================
-// REQUEST INTERCEPTOR
-// ============================================================
+
 
 api.interceptors.request.use(
   (config) => {
@@ -42,9 +40,7 @@ api.interceptors.request.use(
   },
 );
 
-// ============================================================
-// RESPONSE INTERCEPTOR
-// ============================================================
+
 
 let isRefreshing = false;
 
@@ -103,9 +99,7 @@ api.interceptors.response.use(
       return Promise.reject(error);
     }
 
-    // ----------------------------------------------------------
-    // Another request is already refreshing
-    // ----------------------------------------------------------
+   
 
     if (isRefreshing) {
       return new Promise(
@@ -129,9 +123,7 @@ api.interceptors.response.use(
     isRefreshing = true;
 
     try {
-      // --------------------------------------------------------
-      // Refresh token is automatically sent as HttpOnly cookie
-      // --------------------------------------------------------
+      
 
       const response =
         await axios.post<{
