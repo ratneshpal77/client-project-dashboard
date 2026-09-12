@@ -15,7 +15,9 @@ import helmet from "helmet";
 
 const app = express();
 
-app.use(helmet());
+app.use(
+  (helmet as unknown as () => import("express").RequestHandler)(),
+);
 
 app.use(
   cors({
