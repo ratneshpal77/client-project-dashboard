@@ -8,11 +8,11 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/User.ts'
-export type * from './models/Client.ts'
-export type * from './models/Project.ts'
-export type * from './models/Task.ts'
-export type * from './models/Activity.ts'
-export type * from './models/Notification.ts'
-export type * from './models/RefreshToken.ts'
-export type * from './commonInputTypes.ts'
+export type * from './models/User.js'
+export type * from './models/Client.js'
+export type * from './models/Project.js'
+export type * from './models/Task.js'
+export type * from './models/Activity.js'
+export type * from './models/Notification.js'
+export type * from './models/RefreshToken.js'
+export type * from './commonInputTypes.js'
