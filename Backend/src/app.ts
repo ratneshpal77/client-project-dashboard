@@ -11,16 +11,7 @@ import activityRoutes from "./routes/activity.routes.js";
 import notificationRoutes from "./routes/notification.routes.js";
 import dashboardRoutes from "./routes/dashboard.routes.js";
 import userRoutes from "./routes/user.routes.js";
-
-
-import * as helmetModule from "helmet";
-
-const helmet =
-  "default" in helmetModule
-    ? helmetModule.default
-    : helmetModule;
-
-
+import helmet from "helmet";
 
 const app = express();
 
@@ -37,11 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("dev"));
-app.use(
-  "/api/dashboard",
-  dashboardRoutes,
-);
-
+app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/auth", authRoutes);
 app.use("/api/clients", clientRoutes);
