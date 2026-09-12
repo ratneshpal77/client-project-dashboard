@@ -2,10 +2,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import api from "../../api/axios";
 import RoleLayout from "../../components/layout/RoleLayout";
 
-type UserRole =
-  | "ADMIN"
-  | "PROJECT_MANAGER"
-  | "DEVELOPER";
+// type UserRole =
+//   | "ADMIN"
+//   | "PROJECT_MANAGER"
+//   | "DEVELOPER";
 
 type TaskStatus =
   | "TODO"
